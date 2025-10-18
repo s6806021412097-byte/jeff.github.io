@@ -3,64 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Theeradech Srisawat | Portfolio</title>
+  <title>Theeradech Srisawat | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
     body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+      margin: 0; padding: 0; height: 100vh;
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #1f1c2c, #928dab);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
+      color: white; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
     }
-
-    .container {
-      max-width: 600px;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      backdrop-filter: blur(8px);
+    nav {
+      position: absolute; top: 20px;
+      display: flex; gap: 20px;
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    a {
-      display: inline-block;
-      padding: 10px 25px;
-      background: #fff;
-      color: #333;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
+    nav a {
+      color: white; text-decoration: none; font-weight: 500;
       transition: 0.3s;
     }
-
-    a:hover {
-      background: #333;
-      color: #fff;
+    nav a:hover { color: #ffd700; }
+    .box {
+      background: rgba(255,255,255,0.1);
+      padding: 40px; border-radius: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
+    h1 { font-size: 2.5rem; margin: 10px 0; }
+    p { font-size: 1.1rem; margin-bottom: 20px; }
   </style>
 </head>
 <body>
-  <div class="container">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="box">
     <h1>Hello, I'm <span style="color:#ffd700;">Theeradech Srisawat</span></h1>
-    <p>Welcome to my personal website — built with ❤️ on GitHub Pages.</p>
-    <a href="https://github.com/theeradech">Visit My GitHub</a>
+    <p>Welcome to my personal website 🌟</p>
   </div>
 </body>
 </html>
