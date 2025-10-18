@@ -3,48 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Theeradech Srisawat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>About - Theeradech Srisawat</title>
   <style>
     body {
-      margin: 0; padding: 0; font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      color: white; text-align: center;
+      font-family: "Poppins", sans-serif;
+      background: #f9fafc;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-    nav { margin: 20px; display: flex; justify-content: center; gap: 20px; }
-    nav a { color: white; text-decoration: none; transition: 0.3s; }
-    nav a:hover { color: #ffd700; }
-    form {
-      background: rgba(255,255,255,0.1);
-      padding: 30px; border-radius: 20px;
-      max-width: 400px; margin: 50px auto; backdrop-filter: blur(8px);
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px;
     }
-    input, textarea {
-      width: 100%; padding: 10px; margin: 10px 0;
-      border: none; border-radius: 10px; outline: none;
+
+    .profile-pic {
+      flex: 1 1 300px;
+      text-align: center;
     }
-    button {
-      background: #ffd700; border: none; padding: 10px 25px;
-      border-radius: 20px; font-weight: 600; cursor: pointer;
-      transition: 0.3s;
+
+    .profile-pic img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
     }
-    button:hover { background: #fff; color: #333; }
+
+    .profile-pic img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-text {
+      flex: 2 1 400px;
+      padding: 20px 40px;
+    }
+
+    h1 {
+      color: #1a1a1a;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #0078ff;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #0078ff;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-text {
+        padding: 20px;
+        text-align: center;
+      }
+    }
+
+    a {
+      color: #0078ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="about-container">
+    <div class="profile-pic">
+      <img src="profile.jpg" alt="Theeradech Srisawat" />
+    </div>
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        Hi! I'm <b>Theeradech Srisawat</b>.<br>
+        I'm passionate about creating clean, modern, and user-friendly websites.  
+        I enjoy learning new technologies and using them to build things that make people's lives easier.
+      </p>
 
-  <h1>Contact Me</h1>
-  <form>
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="4" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+      <h2>🎓 Education</h2>
+      <p>
+        Currently studying at <b>King Mongkut's University of Technology North Bangkok (KMUTNB)</b><br>
+        <i>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</i>
+      </p>
+
+      <h2>💻 Skills</h2>
+      <ul>
+        <li>Frontend: HTML, CSS, JavaScript, React</li>
+        <li>Backend: Node.js, PHP</li>
+        <li>Database: MySQL, MongoDB</li>
+        <li>Design: Figma, Canva</li>
+      </ul>
+
+      <h2>🎯 Goals</h2>
+      <p>
+        My goal is to become a full-stack developer who can build complete digital solutions and
+        collaborate with others to create meaningful experiences.
+      </p>
+
+      <h2>🌈 Fun Fact</h2>
+      <p>I love tech tutorials, playing games, and exploring design trends.</p>
+
+      <p><a href="index.html">← Back to Home</a></p>
+    </div>
+  </div>
 </body>
 </html>
