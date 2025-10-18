@@ -95,6 +95,37 @@
     }
   </style>
 </head>
+  <!-- วางไว้ด้านบนสุดของ body -->
+<a href="index.html" class="back-btn">← กลับไปหน้าหลัก</a>
+
+<style>
+  .back-btn {
+    position: absolute;
+    top: 20px;       /* ระยะห่างจากขอบบน */
+    right: 20px;     /* ระยะห่างจากขอบขวา */
+    background-color: #0078ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;   /* ให้ปุ่มอยู่เหนือเนื้อหา */
+  }
+
+  .back-btn:hover {
+    background-color: #005bb5;
+  }
+
+  /* ปรับบนมือถือให้เล็กลง */
+  @media (max-width: 768px) {
+    .back-btn {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
 <body>
   <div class="about-container">
     <div class="profile-pic">
