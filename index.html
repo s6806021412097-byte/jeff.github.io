@@ -37,7 +37,6 @@
       animation: fadeIn 1.5s ease-in-out;
     }
 
-
     img.profile {
       width: 150px; height: 150px;
       border-radius: 50%;
@@ -52,6 +51,7 @@
     h1 {
       font-size: 2.2rem;
       margin: 10px 0;
+      color: #ffd700;
       animation: fadeUp 2s ease-out forwards;
     }
 
@@ -61,6 +61,7 @@
       animation: fadeUp 2.5s ease-out forwards;
     }
 
+    /* เอฟเฟกต์ fade */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -69,6 +70,26 @@
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
+    }
+
+    /* เอฟเฟกต์พิมพ์ชื่อ */
+    .typewriter {
+      display: inline-block;
+      border-right: 3px solid #ffd700;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #ffd700; }
     }
   </style>
 </head>
@@ -82,10 +103,26 @@
   </nav>
 
   <div class="box">
-    <img src="profile.jpg" alt="Theeradech Srisawat" class="profile" />
+    <img src="me.jpg" alt="Theeradech Srisawat" class="profile" />
 
-    <h1>Hello, I'm <span style="color:#ffd700;">Theeradech Srisawat</span></h1>
+    <h1>Hello, I'm <span id="name" class="typewriter"></span></h1>
     <p>Welcome to my personal website 🌟</p>
   </div>
+
+  <script>
+    // JavaScript สำหรับพิมพ์ชื่อทีละตัว
+    const text = "Theeradech Srisawat";
+    const target = document.getElementById("name");
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // ความเร็วในการพิมพ์ (มิลลิวินาที)
+      }
+    }
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>
